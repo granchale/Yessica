@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<link href="../CSS/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div class="contenedor">
+	<header>
+		<div>
+			<a href="Inicio.html" ><img class="logo" src="../Imágenes/Mesa de trabajo 4-8.png" alt="Gran chale"></a>
+		</div>
+		<nav> 
+		
+		<ul>
+				<li><a href="Inicio.html">Inicio</a></li>
+				<li><a href="Sobre mí.html">Sobre mí</a></li>
+				<li><a href="Portafolio.html">Portafolio</a></li>
+				<li><a href="Contacto.html">Contacto</a></li>
+		</ul>
+	</nav>
+	</header>
+	</div>
+	
+	<main>
+	<div class="div_botones">
+ 		 <h2 class="h2_sobremi">Portafolio</h2>
+ 		 <p class="p_botones">Click en los botones para cambiar el grid</p>
+ 		 <button class="btn" onclick="one()">1</button>
+ 		 <button class="btn active" onclick="two()">2</button>
+  
+	</div>
+		
+		<div class="row">
+		<div class="column">
+			
+			<a href="Imgs portafolio/Fofo.html" ><img  src="../Imágenes/fofo-dos-post.jpg" alt="Fofo" style="width: 100%"></a>
+			
+			<a href="Imgs portafolio/aborto_marcha.html"><img  src="../Imágenes/marcha-aborto.jpg" alt="aborto" style="width: 100%">
+			</a>
+			
+			<a href="Imgs portafolio/Ansiedad.html" ><video controls loop muted="muted" autoplay="autoplay" style="width: 100%">
+				<source src="../Imágenes/Miedo ae nuevo.mp4" type="video/mp4">
+			</video>
+			</a>
+			
+			<a href="Imgs portafolio/Autoconocimiento.html" ><img  src="../Imágenes/en-el-colegio-me-enseñaron.jpg" alt="autoconocimiento" style="width: 100%">
+			</a>
+			
+			<a href="Imgs portafolio/Ave.html"> <img  src="../Imágenes/Ave.jpg" alt="ave" style="width: 100%">
+			</a>
+				
+		</div>
+		
+		<div class="column">
+			
+			<a href="Imgs portafolio/Oops.html">
+			<video controls loop muted="muted" autoplay="autoplay" style="width: 100%">
+				<source src="../Imágenes/Reel mestruación AFTER.mp4" type="video/mp4">
+			</video>
+			</a>
+			
+			<a href="Imgs portafolio/Palacio nacional.html"> <img  src="../Imágenes/niña-en-palacio-nacional.jpg" alt="palacio nacional" style="width: 100%">
+			</a>
+			
+			<a href="Imgs portafolio/Biología.html" ><img  src="../Imágenes/post.jpg" alt="Ahora todxs" style="width: 100%">
+			</a>
+			
+			<a href="Imgs portafolio/Angel-aborto.html"><img  src="../Imágenes/Ángel-aborto.jpg" alt="angel aborto" style="width: 100%">
+			</a>
+		</div>
+		</div> 
+	</main>
+		
+
+	<footer>
+	<h4>Gran chale. 2021 ©</h4>
+		
+	<div style="width: 20%"> 
+		<a href="https://mail.google.com/mail/u/0/#inbox" target="new"><img class="img_footer" src="../Imágenes/facebook.jpg" alt="gmail"></a>
+		
+		<a href="https://www.instagram.com/granchale/" target="new"><img class="img_footer" src="../Imágenes/instagram.png" alt="instagram"></a>
+		
+		<a href="https://www.facebook.com/robles.yessica/" target="new"><img class="img_footer" src="../Imágenes/facebook.png" alt="facebook"></a>
+		
+	</div>
+	</footer>
+	
+	<script>
+// Get the elements with class="column"
+var elements = document.getElementsByClassName("column");
+
+// Declare a loop variable
+var i;
+
+// Full-width images
+function one() {
+    for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "100%";  // IE10
+    elements[i].style.flex = "100%";
+  }
+}
+
+// Two images side by side
+function two() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "50%";  // IE10
+    elements[i].style.flex = "50%";
+  }
+}
+
+
+// Add active class to the current button (highlight it)
+var header = document.getElementById("myHeader");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+</body>
+</html>
